@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    alert("BIENVENIDO A BATTLESHIP");
+
+    alert("Despliega tu flota y dispara a la cuadrícula de tus oponentes para encontrar y destruir naves enemigas antes de que hundan las tuyas.");
+    alert("Los 'o' son tus naves, las 'x' son los tiros al mar abierto, las '!' son disparos directos al barco contrario")
+    var jugador1 = prompt("Nombre del jugador 1: ");
+    var jugador2 = prompt("Nombre del jugador 2: ");
+    let Tablero1 = createGrid(5);
+    let Tablero2 = createGrid(5);
+    let barcosJugador1 = 3;
+    let barcosJugador2 = 3;
+    let cordenadaEnemiga = {};
+
+    console.log("Tablero de " + jugador2);
+    printGrid(Tablero2, true);
+    console.log("")
+    console.log("Tablero de " + jugador1);
+    printGrid(Tablero1);
+
+    //configuracion del juego
+    for (let i = 1; i < 4; i++) {
+      let f = prompt("Ingrese la coordenada ' x ' para su número de barco " + i);
+      let c = prompt("Ingrese la coordenada 'y' para su número de barco  " + i);
+      placeCharacter(f, c, "O", Tablero1);
+      placeRandomCharacter("O", Tablero2, 5);
+      drawBreak();
+      printGrid(Tablero2, true);
+      printGrid(Tablero1);
+    }
+
+    //bucle del juego
+    while (barcosJugador2 > 0 && barcosJugador1 > 0) {
+
+      let f = prompt("Ingrese la coordenada 'x' para su ataque");
+      let c = prompt("Ingrese la coordenada 'y' para su ataque");
+
+      if (attack(f, c, Tablero2)) {
+        barcosJugador2--;
+      }
+      f = getRandomInt(5);
+      c = getRandomInt(5);
+      if (barcosJugador2 > 0 && attack(f, c, Tablero1)) {
+        barcosJugador1--;
+      }
+
+
+      drawBreak();
+      console.log("Tablero de " + jugador2);
+      printGrid(Tablero2, true);
+      console.log("")
+      console.log("Tablero de " + jugador1);
+      printGrid(Tablero1);
+    }
+
+    if (barcosJugador1 < barcosJugador2) {
+      console.log("!PERDISTE " + jugador1 + "!");
+    } else {
+      console.log("!GANASTE " + jugador1 + "!");
+    }
+
+    function createGrid(size) {
+      let cordenadas = [];
+      for (let i = 0; i < size; i++) {
+        cordenadas[i] = [];
+        for (let j = 0; j < size; j++) {
+          cordenadas[i][j] = "-";
+        }
+      }
+      return cordenadas;
+    }
+
+
+    function printGrid(cordenadas, isEnemy = false) {
+      const headers = createHeaders(cordenadas.length);
+      console.log(headers);
+      for (let i = 0; i < cordenadas.length; i++) {
+        let rowStr = i + " ";
+        for (let cell of cordenadas[i]) {
+          if (isEnemy && cell == "O") {
+            rowStr += "- ";
+          } else {
+            rowStr += cell + " ";
+          }
+        }
+
+        console.log(rowStr);
+
+      }
+
+    }
+
+    function createHeaders(size) {
+      let result = "  ";
+      for (let i = 0; i < size; i++) {
+        result += i + " ";
+      }
+      return result;
+    }
+
+    function placeCharacter(f, c, cor, cordenadas) {
+      cordenadas[c][f] = cor;
+    }
+
+    function placeRandomCharacter(cor, cordenadas, max) {
+      let didPlace = false;
+      while (!didPlace) {
+        let f = getRandomInt(max);
+        let c = getRandomInt(max);
+        if (!cordenadaEnemiga[`${f}-${c}`]) {
+          placeCharacter(f, c, cor, cordenadas);
+          didPlace = true;
+          cordenadaEnemiga[`${f}-${c}`] = true;
+        }
+      }
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function attack(f, c, cordenadas) {
+      if (cordenadas[c][f] == "O") {
+        cordenadas[c][f] = "!";
+        return true;
+      } else if (cordenadas[c][f] == "-") {
+        cordenadas[c][f] = "x";
+        return false;
+      } else {
+        return false;
+      }
+    }
+
+    function drawBreak() {
+      console.log("---------------------------------");
+    }
+
+
+
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
