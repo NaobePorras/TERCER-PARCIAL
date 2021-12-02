@@ -1,0 +1,2458 @@
+<script>
+    alert("Hola bienvenidos al Proyecto Kusikiyo");
+    menu1();
+
+    function menu1 (){
+    let menu = prompt("Ingrese el numero de la opcion que desea: \n 1. Conversor de Palabras \n 2. Juego de Preguntas  \n 3. Datos Historicos \n 4. Salir");
+    switch (menu) {
+        case "1":
+            alert("Has seleccionado Conversion de Palabras");
+            menuw ();
+            break;
+        case "2":
+            alert("Has seleccionado Juego de Preguntas");
+            menupreguntas();
+            break;
+        case "3":
+            alert("Has seleccionado Datos Historicos");
+            datoshis ();
+            break;
+        case "4":
+        alert("Gracias por visualizar el Proyecto");
+            break;
+        default:
+            alert("Opcion no valida");
+            menu1();
+            break;
+    }
+    }
+    function menupreguntas (){
+        let menu = prompt("Ingrese el numero de Cuestionario que desea: \n 1. Cuestionario A  \n 2. Cuestionario B \n 3. Cuestionario C \n 4. Regresar al Menu Principal");
+        switch (menu) {
+            case "1":
+                alert("Has seleccionado Cuestionario A");
+                preguntas();
+                break;
+            case "2":
+                alert("Has seleccionado Cuestionario B");
+                preguntas2();
+                break;
+            case "3":
+                alert("Has seleccionado Cuestionario C");
+                preguntas3();
+                break;
+            case "4":
+                alert("Regresando al Menu Principal");
+                menu1();
+                break;
+            default:
+                alert("Opcion no valida");
+                menupreguntas();
+                break;
+        }
+    }
+function datoshis (){
+    let datos = prompt("Ingrese el numero de la opcion que desea: \n 1. Cultura Nahuatl \n 2. Cultura Zapoteca \n 3. Cultura Mixteca \n 4. Regresar al Menu Principal");
+    switch (datos) {
+        case "1":
+            alert("Has seleccionado Cultura Nahuatl");
+            culturanahuatl ();
+            break;
+        case "2":
+            alert("Has seleccionado Cultura Zapoteca");
+            culturazapoteca ();
+            break;
+        case "3":
+            alert("Has seleccionado Cultura Mixteca");
+            culturamixteca ();
+            break;
+        case "4":
+            return menu1();
+            break;
+        default:
+            alert("Opcion no valida");
+            datoshis ();
+            break;
+    }
+}
+function culturanahuatl (){
+    let datos = prompt("Ingrese el numero de la opcion que desea: \n 1. Historia \n 2. Poemas \n 3. Regresar ");
+    switch (datos) {
+        case "1":
+            alert("Has seleccionado Historia");
+            info ();
+            break;
+        case "2":
+            alert("Has seleccionado Poemas");
+            poemasnahuatl ();
+            break;
+        case "3":
+            return datoshis();
+            break;
+        default:
+            alert("Opcion no valida");
+            culturanahuatl ();
+            break;
+    }
+}
+function preguntas () {
+    let a = prompt("1.- La palabra náhuatl quiere decir “sonido claro o agradable”? \n1 = Verdadero \n2 = Falso");
+    let b = prompt("2.- origen nahuatl mixtécatl significa “habitante del país de las nubes” \n1 = Verdadero \n2 = Falso");
+    let c = prompt("3.- La estructura típica de las oraciones se forma sujeto+objeto? \n1 = Verdadero \n2 = Falso");
+    let d = prompt("4.- Los Mixtecos son reconocidos, debido a que crean obras hermosas, solo con el uso de la tierra? \n1 = Verdadero \n2 = Falso");
+    let e = prompt("5.- El náhuatl  tiene 23 sonidos diferentes: 5 vocales y 18 consonantes? \n1 = Verdadero \n2 = Falso");
+    if (a == "1" && b == "1" && c == "2" && d == "1" && e == "1") {
+        alert("Felicidades, has respondido correctamente todas las preguntas");
+        console.log("Felicidades, tu puntuacion es 5/5");
+        return menupreguntas();
+    } else {
+        alert("Lo sentimos, has respondido incorrectamente algunas preguntas");
+        console.log("Lo sentimos, tu puntuacion es 0/5");
+        let f = prompt("¿Quieres volver a intentarlo? \n Si \n No");
+        switch (f) {
+            case "si":
+                alert("Vuelve a intentarlo");
+                preguntas();
+                break;
+            case "no":
+                alert("Regresando al Menu Principal");
+                menu1();
+                break;
+            default:
+                alert("Opcion no valida");
+                preguntas();
+                break;
+        }
+    }
+}
+function preguntas2 () {
+    let a = prompt("1.- Solo hay una forma para autonombrarse los nahuas? \n1 = Verdadero \n2 = Falso");
+    let b = prompt("2.- La lengua zapoteca solo se habla en 220 municipio? \n1 = Verdadero \n2 = Falso");
+    let c = prompt("3.- El mixteco tiene más de 81 variedades? \n1 = Verdadero \n2 = Falso");
+    let d = prompt("4.- Las lenguas indígenas ayudan a fomentarla paz y el desarrollo sostenible? \n1 = Verdadero \n2 = Falso");
+    let e = prompt("5.- Las lenguas indígenas dan sentido de identidad y cohesión social a pueblos y comunidades? \n1 = Verdadero \n2 = Falso");
+    if (a == "2" && b == "2" && c == "1" && d == "1" && e == "1") {
+        alert("Felicidades, has respondido correctamente todas las preguntas");
+        console.log("Felicidades, tu puntuacion es 5/5");
+        return menupreguntas();
+    } else {
+        alert("Lo sentimos, has respondido incorrectamente algunas preguntas");
+        console.log("Lo sentimos, tu puntuacion es 0/5");
+        let f = prompt("¿Quieres volver a intentarlo? \n Si \n No");
+        switch (f) {
+            case "si":
+                alert("Vuelve a intentarlo");
+                preguntas2();
+                break;
+            case "no":
+                alert("Regresando al Menu Principal");
+                menu1();
+                break;
+            default:
+                alert("Opcion no valida");
+                preguntas2();
+                break;
+        }
+    }
+}
+function preguntas3 () {
+    let a = prompt("1.- Las principales 5 lenguas que se hablan en México son el Náhuatl, Otomí,Chol, Tseltal y Zapoteco? \n1 = Verdadero \n2 = Falso");
+    let b = prompt("2.- México ocupa la posición número 12 en diversidad lingüística? \n1 = Verdadero \n2 = Falso");
+    let c = prompt("3.- Oaxaca, Yucatán y Chiapas son los estados con mayor población hablante de lengua indígena? \n1 = Verdadero \n2 = Falso");
+    let d = prompt("4.- Los  nopales,chapulines y cacahuates son alimentos de la cultura indigena? \n1 = Verdadero \n2 = Falso");
+    let e = prompt("5.- De las 68 lenguas indígenas que se hablan en México aparte del español son originarias del territorio de nuestro país? \n1 = Verdadero \n2 = Falso");
+    if (a == "1" && b == "2" && c == "1" && d == "1" && e == "2") {
+        alert("Felicidades, has respondido correctamente todas las preguntas");
+        console.log("Felicidades, tu puntuacion es 5/5");
+        return menupreguntas();
+    } else {
+        alert("Lo sentimos, has respondido incorrectamente algunas preguntas");
+        console.log("Lo sentimos, tu puntuacion es 0/5");
+        let f = prompt("¿Quieres volver a intentarlo? \n Si \n No");
+        switch (f) {
+            case "si":
+                alert("Vuelve a intentarlo");
+                preguntas3();
+                break;
+            case "no":
+                alert("Regresando al Menu Principal");
+                menu1();
+                break;
+            default:
+                alert("Opcion no valida");
+                preguntas3();
+                break;
+        }
+    }
+}
+function info (){
+    console.log("Historia de la cultura Nahuatl");
+    console.log(" ");
+    console.log("NAHUATL");
+    console.log("• Para autonombrarse, los nahuas actuales usan algunas de estas formas: mexicatl, mexcatl, mexicano, mexicano tlajtol, maseual tlatol, maseual tajtol, nawta, náhuatl.");
+    console.log("• En 1521, los españoles vencieron al Imperio azteca con la conquista de la ciudad de Tenochtitlán. Aun así, no acabaron con su idioma: el náhuatl.");
+    console.log("• El náhuatl es una lengua de los nahuas, que se originó en el territorio de los nahuas de la región de Tenochtitlán, en el estado de México.");
+    console.log("• Lejos de ser una lengua muerta, el náhuatl cuenta con un millón y medio de hablantes indígenas en al menos quince estados de la República Mexicana");
+    console.log("• La palabra náhuatl quiere decir “sonido claro o agradable”");
+    console.log("• La gramática del náhuatl y la gramática del inglés son muy similares. Es interesante decir que la gramática del náhuatl tiene mucho parecido con la gramática del inglés ya que primero está el adjetivo y luego el sujeto");
+    console.log("• Existen 30 variantes con sus respectivas autodenominaciones.");
+    console.log("• Una característica muy interesante del náhuatl es que tiene 23 sonidos diferentes: 5 vocales y 18 consonantes.");
+    console.log(" ")
+    return culturanahuatl();
+}
+function info2 (){
+    console.log("Historia de la cultura Zapoteca");
+    console.log(" ");
+    console.log("ZAPOTECA");
+    console.log("• La lengua de los zapotecas es una de las 56 lenguas amerindias de México y pertenece a la familia de las lenguas otomangue.");
+    console.log("• Después del mixteco, la agrupación zapoteca tiene más variantes locales que cualquier otra familia, cuenta con 62 variantes.");
+    console.log("• Las lenguas zapotecas se hablan en Oaxaca (220 municipios) y en el suroeste de Veracruz (tres municipios).");
+    console.log(" ")
+    return culturazapoteca();
+}
+function info3 (){
+    console.log("Historia de la cultura Mixteca");
+    console.log(" ");
+    console.log("MIXTECA");
+    console.log("• Los Mixtecos son los alfareros más importantes y reconocidos de todo el territorio mexicano, debido a que crean obras hermosas, solo con el uso de la tierra.");
+    console.log("• La estructura típica de las oraciones en mixteco es verbo + sujeto + objeto");
+    console.log("• Fonológicamente, las lenguas mixtecas se caracterizan por una fuerte tendencia nasal de la que da cuenta el gran número de fonemas nasales y prenasalizados");
+    console.log("• mixteco es la castellanización de la palabra de origen nahuatl mixtécatl, que significa 'habitante del país de las nubes'");
+    console.log("• Los hablantes de mixteco llaman a su lengua con alguno de los diversos cognados en cada una de las variedades para el concepto 'palabra de la lluvia' o 'lengua de la lluvia'");
+    console.log("• El mixteco tiene más de 81 variedades");
+    console.log(" ")
+    return culturamixteca();
+}
+function culturazapoteca (){
+    let datos = prompt("Ingrese el numero de la opcion que desea: \n 1. Historia \n 2. Poemas \n 3. Regresar ");
+    switch (datos) {
+        case "1":
+            alert("Has seleccionado Historia");
+            info2 ();
+            break;
+        case "2":
+            alert("Has seleccionado Poemas");
+            poemaszapoteco ();
+            break;
+        case "3":
+            return datoshis();
+            break;
+        default:
+            alert("Opcion no valida");
+            culturazapoteca ();
+            break;
+    }
+}
+function culturamixteca (){
+    let datos = prompt("Ingrese el numero de la opcion que desea: \n 1. Historia \n 2. Poemas \n 3. Regresar ");
+    switch (datos) {
+        case "1":
+            alert("Has seleccionado Historia");
+            info3 ();
+            break;
+        case "2":
+            alert("Has seleccionado Poemas");
+            poemasmixteco ();
+            break;
+        case "3":
+            return datoshis();
+            break;
+        default:
+            alert("Opcion no valida");
+            culturamixteca ();
+            break;
+    }
+}
+    function menuw (){
+    let opciones = prompt("¿Que Lengua desea traducir? \n 1. Español / Nahuatl \n 2. Español / Zapoteco \n 3. Español / Mixteco \n 4. Regresar al Menu Principal");
+    switch (opciones) {
+        case "1":
+            alert("Has Selecciona: \nEspañol / Nahuat");
+            nahuat();
+            break;
+        case "2":
+            alert("Has Selecciona: \nEspañol / Zapoteco");
+            zapoteco();
+            break;
+        case "3":
+            alert("Has Selecciona: \nEspañol / Mixteco");
+            mixteco();
+            break;
+        case "4":
+            return menu1 ();
+            break;
+        default:
+            alert("Idioma no valido");
+            menuw();
+            break;
+    }
+    }
+    function nahuat (){
+        let a = prompt("¿Que palabra desea traducir?");
+        let nahuat = [
+            {
+            "Espanol" : "Perro ",
+            "Nahuatl" : "chichi"
+            },
+            {
+            "Espanol" : "Avion ",
+            "Nahuatl" : "tepostototl"
+            },
+            {
+            "Espanol" : "Hola ",
+            "Nahuatl" : "Niltze"
+            },
+            {
+            "Espanol" : "Casa ",
+            "Nahuatl" : "Kal-le "
+            },  
+            {
+            "Espanol" : "Tamal ",
+            "Nahuatl" : "Tamal-le"
+            },
+            {
+            "Espanol" : "Tortilla ",
+            "Nahuatl" : "Kual-le"
+            },
+            {
+            "Espanol" : "Felicidades ",
+            "Nahuatl" : "Pakiliskayoli  "
+            },
+            {
+            "Espanol" : "Comal ",
+            "Nahuatl" : "Komal-le "
+            },
+            {
+            "Espanol" : "Adios ",
+            "Nahuatl" : "Anej "
+            },
+            {
+            "Espanol" : "Gracias ",
+            "Nahuatl" : "Tlasojkamati "
+            },
+            {
+            "Espanol" : "Ven ",
+            "Nahuatl" : "Xia "
+            },
+            {
+            "Espanol" : "Algo ",
+            "Nahuatl" : "achi, itla, seki "
+            },
+            {
+            "Espanol" : "Perdon ",
+            "Nahuatl" : "Tlapopouili "
+            },
+            {
+            "Espanol" : "Espera ",
+            "Nahuatl" : "xonkalki,  chia"
+            },
+            {
+            "Espanol" : "Calma ",
+            "Nahuatl" : "Kauik "
+            },
+            {
+            "Espanol" : "Levantalo ",
+            "Nahuatl" : "Pepenalti "
+            },
+            {
+            "Espanol" : "Asomate ",
+            "Nahuatl" : "Nanaj "
+            },
+            {
+            "Espanol" : "Buenas noches ",
+            "Nahuatl" : "Kuali youaltin "
+            },
+            {
+            "Espanol" : "Buenas tardes ",
+            "Nahuatl" : "Kuali teotlaktin "
+            },
+            {
+            "Espanol" : "Buenos dias ",
+            "Nahuatl" : "kuali tonaltin, panolti "
+            },
+            {
+            "Espanol" : "Feliz cumpleaños ",
+            "Nahuatl" : "Kuali iluichiuali "
+            },
+            {
+            "Espanol" : "Con permiso ",
+            "Nahuatl" : "Teixkontsinko "
+            },
+            {
+            "Espanol" : "Te amo ",
+            "Nahuatl" : "Nimitstlasojtla "
+            },
+            {
+            "Espanol" : "Te extraño ",
+            "Nahuatl" : "Nimitstlailnamiki "
+            },
+            {
+            "Espanol" : "Te extraño mucho ",
+            "Nahuatl" : "Senka nimitstlailnamiki "
+            },
+            {
+            "Espanol" : "Te quiero ",
+            "Nahuatl" : "Nimitstlamonekiltia "
+            },
+            {
+            "Espanol" : "Te quiero mucho ",
+            "Nahuatl" : "Ixachi nimitstlamonekiltia "
+            }
+        ];
+        for (let i = 0; i < nahuat.length; i++) {
+            if (a == nahuat[i].Espanol) {
+                console.log("Español: " + nahuat[i].Espanol + "\n" + "Nahuatl: " + nahuat[i].Nahuatl);
+                console.log(" ");
+                preguntarotravez();
+                break;
+            }
+            if (i == nahuat.length - 1) {
+                console.log(a + " No se encontro en la lista");
+                console.log(" ");
+                preguntarotravez();
+            }
+        }
+    }
+    function preguntarotravez (){
+    let b = prompt("¿Desea traducir otra palabra? \n 1. Si \n 2. No");
+        switch (b) {
+            case "1":
+                return nahuat();
+                break;
+            case "2":
+                return menuw();
+                break;
+            default:
+                alert("Opcion no valida");
+                preguntarotravez();
+                break;
+    }
+    }
+function zapoteco (){
+    let a = prompt("¿Que palabra desea traducir?");
+    let zapoteco = [
+            {
+               "Espanol" : "Abandonado ",
+               "zapoteco" : "Chho’s"
+            },
+            {
+               "Espanol" : "Abrazar ",
+               "zapoteco" : "Chyela’"
+             },
+             {
+                "Espanol" : "Abuelo ",
+                "zapoteco" : "Xtao"
+            },
+             {
+                "Espanol" : "Agarrar ",
+                "zapoteco" : "Wexo’"
+            },
+            {
+                "Espanol" : "Amor ",
+                "zapoteco" : "Lazdao"
+            },
+            {
+                "Espanol" : "Animal ",
+                "zapoteco" : "Be"
+            },
+            {
+                "Espanol" : "Bailar ",
+                "zapoteco" : "Chhoya’a"
+            },
+            {
+                "Espanol" : "Bañar ",
+                "zapoteco" : "Gozj"
+            },
+            {
+                "Espanol" : "Cabaña ",
+                "zapoteco" : "Rhanzo"
+            },
+            {
+                "Espanol" : "Daño ",
+                "zapoteco" : "Xgia"
+            },
+            {
+                "Espanol" : "Detener ",
+                "zapoteco" : "Chchuan’an"
+            },
+            {
+                "Espanol" : "Dormir ",
+                "zapoteco" : "Wetas"
+            },
+            {
+                "Espanol" : "Egoista ",
+                "zapoteco" : "Chey"
+            },
+            {
+                "Espanol" : "Feo ",
+                "zapoteco" : "Sban"
+            },
+            {
+                "Espanol" : "Feliz ",
+                "zapoteco" : "Banhez"
+            },
+            {
+                "Espanol" : "Galleta ",
+                "zapoteco" : "Gazet"
+            },
+            {
+                "Espanol" : "Idioma ",
+                "zapoteco" : "Diidza"
+            },
+            {
+                "Espanol" : "Herramienta ",
+                "zapoteco" : "Xchinlaze’"
+            },
+            {
+                "Espanol" : "Identidad ",
+                "zapoteco" : "Caze’"
+            },
+            {
+                "Espanol" : "Iglesia ",
+                "zapoteco" : "Yodao"
+            },
+            {
+                "Espanol" : "Insecto ",
+                "zapoteco" : "Beado"
+            },
+            {
+                "Espanol" : "Hoja ",
+                "zapoteco" : "Laga"
+            },
+            {
+                "Espanol" : "Hombre ",
+                "zapoteco" : "Banache"
+            },
+            {
+                "Espanol" : "Grande ",
+                "zapoteco" : "Cha’o"
+            },
+            {
+                "Espanol" : "Helado ",
+                "zapoteco" : "Zix beye’ "
+            },
+            {
+                "Espanol" : "Gordo ",
+                "zapoteco" : "Xhat"
+            },
+            {
+                "Espanol" : "Envidia ",
+                "zapoteco" : "Xhee"
+            },
+            {
+                "Espanol" : "Español ",
+                "zapoteco" : "Xtilha"
+            },
+            {
+                "Espanol" : "Flor ",
+                "zapoteco" : "Yej"
+            },
+            {
+                "Espanol" : "Desecho ",
+                "zapoteco" : "Cho’on"
+            },
+            {
+                "Espanol" : "Cachorro ",
+                "zapoteco" : "Bechhe’ne"
+            },
+            {
+                "Espanol" : "Cigarro ",
+                "zapoteco" : "Wej"
+            },
+            {
+                "Espanol" : "Cobarde ",
+                "zapoteco" : "Bxhej"
+            },
+            {
+                "Espanol" : "Cabeza ",
+                "zapoteco" : "Yichj"
+            },
+            {
+                "Espanol" : "Canasta ",
+                "zapoteco" : "Zome"
+            },
+            {
+                "Espanol" : "Ojo ",
+                "zapoteco" : "Bizalú"
+            },
+            {
+                "Espanol" : "Nariz ",
+                "zapoteco" : "Xii"
+            },
+            {
+                "Espanol" : "Triste ",
+                "zapoteco" : "Ache"
+            },
+            {
+                "Espanol" : "Alto ",
+                "zapoteco" : "sibe"
+            },
+            {
+                "Espanol" : "Tiempo ",
+                "zapoteco" : "Bea"
+            },
+            {
+                "Espanol" : "Ave ",
+                "zapoteco" : "Becjhoj"
+            },
+            {
+                "Espanol" : "Medicina ",
+                "zapoteco" : "Beda"
+            },
+            {
+                "Espanol" : "Adulto ",
+                "zapoteco" : "Bene waca"
+            },
+            {
+                "Espanol" : "Dolor ",
+                "zapoteco" : "Bese"
+            },
+            {
+                "Espanol" : "Gato ",
+                "zapoteco" : "Biz"
+            },
+            {
+                "Espanol" : "Inicio ",
+                "zapoteco" : "Bxe"
+            },
+            {
+                "Espanol" : "Ultimo ",
+                "zapoteco" : "Bzebe"
+            },
+            {
+                "Espanol" : "Cerdo ",
+                "zapoteco" : "Cerdo"
+            },
+            {
+                "Espanol" : "Café ",
+                "zapoteco" : "Chag"
+            },
+            {
+                "Espanol" : "ir ",
+                "zapoteco" : "Chej"
+            },
+            {
+                "Espanol" : "Sangre ",
+                "zapoteco" : "Chhenhe"
+            },
+            {
+                "Espanol" : "Eco ",
+                "zapoteco" : "Chhi´i"
+            },
+            {
+                "Espanol" : "Abandonar ",
+                "zapoteco" : "Chho´on"
+            },
+            {
+                "Espanol" : "Matar ",
+                "zapoteco" : "Chhot"
+            },
+            {
+                "Espanol" : "Bailar ",
+                "zapoteco" : "Chhoya´ja"
+            },
+            {
+                "Espanol" : "Ecribir ",
+                "zapoteco" : "Chhozoja"
+            },
+            {
+                "Espanol" : "Diez ",
+                "zapoteco" : "Chi"
+            },
+            {
+                "Espanol" : "Decir ",
+                "zapoteco" : "Choe"
+            },
+            {
+                "Espanol" : "Calor ",
+                "zapoteco" : "Da´la"
+            },
+            {
+                "Espanol" : "Familia ",
+                "zapoteco" : "Diaza"
+            },
+            {
+                "Espanol" : "Lengua ",
+                "zapoteco" : "Diidza"
+            },
+            {
+                "Espanol" : "Gracias ",
+                "zapoteco" : "Dioxhclen"
+            },
+            {
+                "Espanol" : "Cuerda ",
+                "zapoteco" : "Do"
+            },
+            {
+                "Espanol" : "Negro ",
+                "zapoteco" : "Gasj"
+            },
+            {
+                "Espanol" : "Barro ",
+                "zapoteco" : "Gonha"
+            },
+            {
+                "Espanol" : "Raíz ",
+                "zapoteco" : "Ihoe"
+            },
+            {
+                "Espanol" : "Derecho ",
+                "zapoteco" : "Ilcha"
+            },
+            {
+                "Espanol" : "Gallina ",
+                "zapoteco" : "Jed"
+            },
+            {
+                "Espanol" : "Hoja ",
+                "zapoteco" : "Laga"
+            },
+            {
+                "Espanol" : "Pantalon ",
+                "zapoteco" : "Lanha´"
+            },
+            {
+                "Espanol" : "Amor ",
+                "zapoteco" : "Lanha´"
+            },
+            {
+                "Espanol" : "Felicidad ",
+                "zapoteco" : "Mba"
+            },
+            {
+                "Espanol" : "Brazo ",
+                "zapoteco" : "Na´a"
+            },
+            {
+                "Espanol" : "Sucio ",
+                "zapoteco" : "Ne´e"
+            },
+            {
+                "Espanol" : "Agua ",
+                "zapoteco" : "Nhis"
+            },
+            {
+                "Espanol" : "Mar ",
+                "zapoteco" : "Nhisdao"
+            },
+            {
+                "Espanol" : "Leche ",
+                "zapoteco" : "Nhize"
+            },
+            {
+                "Espanol" : "Izquierdo ",
+                "zapoteco" : "Rhebelse"
+            },
+            {
+                "Espanol" : "Feo ",
+                "zapoteco" : "Sban"
+            },
+            {
+                "Espanol" : "Aceite ",
+                "zapoteco" : "Set"
+            },
+            {
+                "Espanol" : "Durazno ",
+                "zapoteco" : "Trax"
+            },
+            {
+                "Espanol" : "Hablar ",
+                "zapoteco" : "Wene"
+            },
+            {
+                "Espanol" : "Idea ",
+                "zapoteco" : "Xbab:"
+            },
+            {
+                "Espanol" : "Hermoso ",
+                "zapoteco" : "Xdan"
+            },
+            {
+                "Espanol" : "Comida ",
+                "zapoteco" : "Xhue"
+            },
+            {
+                "Espanol" : "Craneo ",
+                "zapoteco" : "Xlhega"
+            },
+            {
+                "Espanol" : "Rojo ",
+                "zapoteco" : "Xna"
+            },
+            {
+                "Espanol" : "Mamá ",
+                "zapoteco" : "Xnha we"
+            },
+            {
+                "Espanol" : "ocho ",
+                "zapoteco" : "Xono´"
+            },
+            {
+                "Espanol" : "Caña ",
+                "zapoteco" : "Ya"
+            },
+            {
+                "Espanol" : "Árbol ",
+                "zapoteco" : "Ya´g"
+            },
+            {
+                "Espanol" : "Hoyo ",
+                "zapoteco" : "Yechho"
+            },
+            {
+                "Espanol" : "Vida ",
+                "zapoteco" : "Yel´nban"
+            },
+            {
+                "Espanol" : "Fego ",
+                "zapoteco" : "Yi´"
+            },
+            {
+                "Espanol" : "Cabeza ",
+                "zapoteco" : "Yichj"
+            },
+            {
+                "Espanol" : "Libro ",
+                "zapoteco" : "Yishe"
+            },{
+                "Espanol" : "Cicatriz ",
+                "zapoteco" : "Yiz"
+            },
+            {
+                "Espanol" : "Casa ",
+                "zapoteco" : "Yo´o"
+            },
+            {
+                "Espanol" : "Frijol ",
+                "zapoteco" : "Za´"
+            },
+            {
+                "Espanol" : "Elote ",
+                "zapoteco" : "Za´a"
+            },
+            {
+                "Espanol" : "Sal ",
+                "zapoteco" : "Zede´"
+            },
+            {
+                "Espanol" : "Abajo ",
+                "zapoteco" : "Zi´rha"
+            },
+            {
+                "Espanol" : "Azucar ",
+                "zapoteco" : "Zix"
+            },
+            {
+                "Espanol" : "Carbón ",
+                "zapoteco" : "Buu"
+            },
+            {
+                "Espanol" : "Flor de Maiz ",
+                "zapoteco" : "Du"
+            },
+            {
+                "Espanol" : "Todos ",
+                "zapoteco" : "Irá"
+            },
+            {
+                "Espanol" : "Calvo ",
+                "zapoteco" : "Iquee raa"
+            },
+            {
+                "Espanol" : "Nombre ",
+                "zapoteco" : "lá"
+            },
+            {
+                "Espanol" : "Comezon ",
+                "zapoteco" : "Nabanaa"
+            },
+        ];
+        for (let i = 0; i < zapoteco.length; i++) {
+            if (a == zapoteco[i].Espanol) {
+                console.log("Español: " + zapoteco[i].Espanol +  "\n" + "Zapoteco: " + zapoteco[i].zapoteco);
+                console.log(" ");
+                preguntarotravez2();
+                break;
+            }
+            if (i == zapoteco.length -1) {
+                console.log(a + " No se encontro en la lista");
+                console.log(" ");
+                preguntarotravez2();
+            }
+        }
+}
+function preguntarotravez2 (){
+    let b = prompt("¿Desea traducir otra palabra? \n 1. Si \n 2. No");
+        switch (b) {
+            case "1":
+                return zapoteco();
+                break;
+            case "2":
+                return menuw();
+                break;
+            default:
+                alert("Opcion no valida");
+                preguntarotravez2();
+                break;
+    }
+    }
+function mixteco (){
+    let a = prompt("¿Que palabra desea traducir?");
+    let mixteco = [
+    {
+    "Espanol" : "Cielo ",
+    "Mixteco" : "Andivin"
+    },
+    {
+    "Espanol" : "Cosmos ",
+    "Mixteco" : "Andivi"
+    },
+    {
+    "Espanol" : "Astronauta ",
+    "Mixteco" : "Andivi Taa"
+    },
+    {
+    "Espanol" : "Avion ",
+    "Mixteco" : "Avion"
+    },
+    {
+    "Espanol" : "Alma ",
+    "Mixteco" : "Añu"
+    },
+    {
+    "Espanol" : "Sentimiento ",
+    "Mixteco" : "Añu"
+    },
+    {
+    "Espanol" : "Chinche ",
+    "Mixteco" : "Cha´A"
+    },
+    {
+    "Espanol" : "Guaje ",
+    "Mixteco" : "Cha´A"
+    },
+    {
+    "Espanol" : "Capullo ",
+    "Mixteco" : "Cha´Ma"
+    },
+    {
+    "Espanol" : "Pulmon ",
+    "Mixteco" : "Cha´Ma"
+    },
+    {
+    "Espanol" : "Suave ",
+    "Mixteco" : "Vita "
+    },
+    {
+    "Espanol" : "Liendre ",
+    "Mixteco" : "Cha´Vi"
+    },
+    {
+    "Espanol" : "Pagar ",
+    "Mixteco" : "Cha´Vi"
+    },
+    {
+    "Espanol" : "Cabello ",
+    "Mixteco" : "Chacha"
+    },
+    {
+    "Espanol" : "Pescado ",
+    "Mixteco" : "Chaka"
+    },
+    {
+    "Espanol" : "Añadir ",
+    "Mixteco" : "Chakatu"
+    },
+    {
+    "Espanol" : "Comprender ",
+    "Mixteco" : "Chakatuini"
+    },
+    {
+    "Espanol" : "Atravezar ",
+    "Mixteco" : "Chanuu"
+    },
+    {
+    "Espanol" : "Conectar ",
+    "Mixteco" : "Chata´An"
+    },
+    {
+    "Espanol" : "Obligar ",
+    "Mixteco" : "Chayika"
+    },
+    {
+    "Espanol" : "Importante ",
+    "Mixteco" : "Chee"
+    },
+    {
+    "Espanol" : "Viejo ",
+    "Mixteco" : "Chee O Yata"
+    },
+    {
+    "Espanol" : "Becerro ",
+    "Mixteco" : "Chelu"
+    },
+    {
+    "Espanol" : "Porque ",
+    "Mixteco" : "Chi"
+    },
+    {
+    "Espanol" : "Clavar ",
+    "Mixteco" : "Chi´I"
+    },
+    {
+    "Espanol" : "Cocer ",
+    "Mixteco" : "Chi´Iyo"
+    },
+    {
+    "Espanol" : "Barriga ",
+    "Mixteco" : "Chii"
+    },
+    {
+    "Espanol" : "Estomago ",
+    "Mixteco" : "Chii O Ini"
+    },
+    {
+    "Espanol" : "Meter ",
+    "Mixteco" : "Chakaa O Skivi"
+    },
+    {
+    "Espanol" : "Cubir ",
+    "Mixteco" : "Chikasi"
+    },
+    {
+    "Espanol" : "Medir ",
+    "Mixteco" : "Chiua´A"
+    },
+    {
+    "Espanol" : "Pesar ",
+    "Mixteco" : "Chikua´A"
+    },
+    {
+    "Espanol" : "Trazar ",
+    "Mixteco" : "Chikua´A"
+    },
+    {
+    "Espanol" : "Juntar ",
+    "Mixteco" : "Chikuiti"
+    },
+    {
+    "Espanol" : "Recoge ",
+    "Mixteco" : "Chikuiti"
+    },
+    {
+    "Espanol" : "Empujar ",
+    "Mixteco" : "Chinda´A"
+    },
+    {
+    "Espanol" : "Apoyar ",
+    "Mixteco" : "Chindee"
+    },
+    {
+    "Espanol" : "Saludar ",
+    "Mixteco" : "Chindee O Kanchia´Vi"
+    },
+    {
+    "Espanol" : "Ayudar ",
+    "Mixteco" : "Chindee"
+    },
+    {
+    "Espanol" : "Encerrar ",
+    "Mixteco" : "Chindi´Yu"
+    },
+    {
+    "Espanol" : "Perseguir ",
+    "Mixteco" : "Chindiku"
+    },
+    {
+    "Espanol" : "Cornear ",
+    "Mixteco" : "Chinduu"
+    },
+    {
+    "Espanol" : "Enterrar ",
+    "Mixteco" : "Chindiyi O Chinduxi"
+    },
+    {
+    "Espanol" : "Esconder ",
+    "Mixteco" : "Chisa´Yi"
+    },
+    {
+    "Espanol" : "Prometer ",
+    "Mixteco" : "Chisitu´Un"
+    },
+    {
+    "Espanol" : "Apuntar ",
+    "Mixteco" : "Chiso"
+    },
+    {
+    "Espanol" : "Avispa ",
+    "Mixteco" : "Chita"
+    },
+    {
+    "Espanol" : "Canasta ",
+    "Mixteco" : "Chita"
+    },
+    {
+    "Espanol" : "Doblar ",
+    "Mixteco" : "Chita´Nu"
+    },
+    {
+    "Espanol" : "Embrujar ",
+    "Mixteco" : "Chitasi"
+    },
+    {
+    "Espanol" : "Pellizcar ",
+    "Mixteco" : "Chite´E"
+    },
+    {
+    "Espanol" : "Huraño ",
+    "Mixteco" : "Chitu"
+    },
+    {
+    "Espanol" : "Axila ",
+    "Mixteco" : "Chixe´E"
+    },
+    {
+    "Espanol" : "Retirar ",
+    "Mixteco" : "Chixiyo"
+    },
+    {
+    "Espanol" : "Pulga ",
+    "Mixteco" : "Cho´O"
+    },
+    {
+    "Espanol" : "Cangrajo ",
+    "Mixteco" : "Choo"
+    },
+    {
+    "Espanol" : "Estrella ",
+    "Mixteco" : "Choxini"
+    },
+    {
+    "Espanol" : "Atencion ",
+    "Mixteco" : "Chu´Un"
+    },
+    {
+    "Espanol" : "Encaminar ",
+    "Mixteco" : "Chu´Un Ichi"
+    },
+    {
+    "Espanol" : "Peinar ",
+    "Mixteco" : "Chuín Kuka"
+    },
+    {
+    "Espanol" : "Inflar ",
+    "Mixteco" : "Chu´Un Tachi"
+    },
+    {
+    "Espanol" : "Concebir ",
+    "Mixteco" : "Chu´Un Xini"
+    },
+    {
+    "Espanol" : "Echar ",
+    "Mixteco" : "Chikaa"
+    },
+    {
+    "Espanol" : "Hamaca ",
+    "Mixteco" : "Chu´Va"
+    },
+    {
+    "Espanol" : "Piojo ",
+    "Mixteco" : "Chuku"
+    },
+    {
+    "Espanol" : "Mosca ",
+    "Mixteco" : "Chukun"
+    },
+    {
+    "Espanol" : "Moscon ",
+    "Mixteco" : "Chukun Xiñu"
+    },
+    {
+    "Espanol" : "Mosco ",
+    "Mixteco" : "Chukun Yaa"
+    },
+    {
+    "Espanol" : "Pagarse ",
+    "Mixteco" : "Chunaa"
+    },
+    {
+    "Espanol" : "Sepultar ",
+    "Mixteco" : "Chunduxi"
+    },
+    {
+    "Espanol" : "Compartir ",
+    "Mixteco" : "Chunsava"
+    },
+    {
+    "Espanol" : "Dividir ",
+    "Mixteco" : "Chunsava"
+    },
+    {
+    "Espanol" : "Cruz ",
+    "Mixteco" : "Chusi"
+    },
+    {
+    "Espanol" : "Gallina ",
+    "Mixteco" : "Chuun"
+    },
+    {
+    "Espanol" : "Lechuza ",
+    "Mixteco" : "Chuun Sayu"
+    },
+    {
+    "Espanol" : "Palito ",
+    "Mixteco" : "Chuxi"
+    },
+    {
+    "Espanol" : "Hacia ",
+    "Mixteco" : "Chi"
+    },
+    {
+    "Espanol" : "Nido ",
+    "Mixteco" : "Chi´Yo"
+    },
+    {
+    "Espanol" : "Hervir ",
+    "Mixteco" : "Chi´Yo O Kiti "
+    },
+    {
+    "Espanol" : "Zorrilo ",
+    "Mixteco" : "Chi´In"
+    },
+    {
+    "Espanol" : "Tuna ",
+    "Mixteco" : "Chikin"
+    },
+    {
+    "Espanol" : "Pepita ",
+    "Mixteco" : "Ndikin"
+    },
+    {
+    "Espanol" : "Platano ",
+    "Mixteco" : "Chita"
+    },
+    {
+    "Espanol" : "Dios ",
+    "Mixteco" : "Yandioxi"
+    },
+    {
+    "Espanol" : "El ",
+    "Mixteco" : "Yi"
+    },
+    {
+    "Espanol" : "Cesped ",
+    "Mixteco" : "Icha"
+    },
+    {
+    "Espanol" : "Pasto ",
+    "Mixteco" : "Icha"
+    },
+    {
+    "Espanol" : "Zacate ",
+    "Mixteco" : "Ndayo´O"
+    },
+    {
+    "Espanol" : "Autoridad ",
+    "Mixteco" : "Ichi"
+    },
+    {
+    "Espanol" : "Secarse ",
+    "Mixteco" : "Icghi O Xii"
+    },
+    {
+    "Espanol" : "Por ",
+    "Mixteco" : "Achi O Xa´A"
+    },
+    {
+    "Espanol" : "Seco ",
+    "Mixteco" : "Ichi"
+    },
+    {
+    "Espanol" : "Ciervo ",
+    "Mixteco" : "Idu"
+    },
+    {
+    "Espanol" : "Alla ",
+    "Mixteco" : "Ikan"
+    },
+    {
+    "Espanol" : "Campo ",
+    "Mixteco" : "Iku"
+    },
+    {
+    "Espanol" : "Anteayer ",
+    "Mixteco" : "Iku Ñuu O Kiuun"
+    },
+    {
+    "Espanol" : "Perro ",
+    "Mixteco" : "Ina"
+    },
+    {
+    "Espanol" : "Pechos ",
+    "Mixteco" : "Indoso"
+    },
+    {
+    "Espanol" : "Adentro ",
+    "Mixteco" : "Ini"
+    },
+    {
+    "Espanol" : "Proximo ",
+    "Mixteco" : "Inka"
+    },
+    {
+    "Espanol" : "Cigarro ",
+    "Mixteco" : "Inu"
+    },
+    {
+    "Espanol" : "Elotito ",
+    "Mixteco" : "Isa"
+    },
+    {
+    "Espanol" : "Flor ",
+    "Mixteco" : "Ita"
+    },
+    {
+    "Espanol" : "Dalia ",
+    "Mixteco" : "Ita Ka´Yu"
+    },
+    {
+    "Espanol" : "Cempasuchi ",
+    "Mixteco" : "Ita Ndɨyɨ"
+    },
+    {
+    "Espanol" : "Tierno ",
+    "Mixteco" : "Ita O Yɨkin"
+    },
+    {
+    "Espanol" : "Izquierdo ",
+    "Mixteco" : "Itin"
+    },
+    {
+    "Espanol" : "Ocote ",
+    "Mixteco" : "Itin"
+    },
+    {
+    "Espanol" : "Milpa ",
+    "Mixteco" : "Itu"
+    },{
+    "Espanol" : "Arbusto ",
+    "Mixteco" : "Itun"
+    },
+    {
+    "Espanol" : "Coche ",
+    "Mixteco" : "Itun O Karro"
+    },
+    {
+    "Espanol" : "Planta ",
+    "Mixteco" : "Yutun Lo´O"
+    },
+    {
+    "Espanol" : "Hierba ",
+    "Mixteco" : "Iva O Yuku Kuii"
+    },
+    {
+    "Espanol" : "Petate ",
+    "Mixteco" : "Ivi"
+    },
+    {
+    "Espanol" : "Lana ",
+    "Mixteco" : "Ixi"
+    },
+    {
+    "Espanol" : "Pestaña ",
+    "Mixteco" : "Ixi Nduchi"
+    },
+    {
+    "Espanol" : "Barba ",
+    "Mixteco" : "Ixi Nuu"
+    },
+    {
+    "Espanol" : "Pelo ",
+    "Mixteco" : "Ixi O Idi"
+    },
+    {
+    "Espanol" : "Acido ",
+    "Mixteco" : "Iya"
+    },
+    {
+    "Espanol" : "Barba ",
+    "Mixteco" : "Ixi Nuu"
+    },
+    {
+    "Espanol" : "Agrio ",
+    "Mixteco" : "Iya"
+    },
+    {
+    "Espanol" : "Cobarde ",
+    "Mixteco" : "Iyu´U"
+    },
+    {
+    "Espanol" : "Espina ",
+    "Mixteco" : "Iñu"
+    },
+    {
+    "Espanol" : "Seis ",
+    "Mixteco" : "Iñu"
+    },
+    {
+    "Espanol" : "Mas ",
+    "Mixteco" : "Ka"
+    },
+    {
+    "Espanol" : "Barato ",
+    "Mixteco" : "Ka´A"
+    },
+    {
+    "Espanol" : "Anunciar ",
+    "Mixteco" : "Ka´An"
+    },
+    {
+    "Espanol" : "Hablar ",
+    "Mixteco" : "Ka´An"
+    },
+    {
+    "Espanol" : "Importar ",
+    "Mixteco" : "Ka´An Nda´Vi"
+    },
+    {
+    "Espanol" : "Jurar ",
+    "Mixteco" : "Ka´An Ndaa"
+    },
+    {
+    "Espanol" : "Repetir ",
+    "Mixteco" : "Ka´An Tuku"
+    },
+    {
+    "Espanol" : "Susurrar ",
+    "Mixteco" : "Ka´An Xe´E"
+    },
+    {
+    "Espanol" : "Pegar ",
+    "Mixteco" : "Ka´In Tii"
+    },
+    {
+    "Espanol" : "Fumar ",
+    "Mixteco" : "Ka´Mi"
+    },
+    {
+    "Espanol" : "Quemar ",
+    "Mixteco" : "Ka´Mi O Kayu"
+    },
+    {
+    "Espanol" : "Germinar ",
+    "Mixteco" : "Ka´Nda"
+    },
+    {
+    "Espanol" : "Desanimar ",
+    "Mixteco" : "Ka´Ncha Ini"
+    },
+    {
+    "Espanol" : "Romper ",
+    "Mixteco" : "Ka´Nda"
+    },
+    {
+    "Espanol" : "Explorar ",
+    "Mixteco" : "Sika´Ndi"
+    },
+    {
+    "Espanol" : "Cazar ",
+    "Mixteco" : "Ka´Ni"
+    },
+    {
+    "Espanol" : "Fiebre ",
+    "Mixteco" : "Ka´Ni"
+    },
+    {
+    "Espanol" : "Cortar ",
+    "Mixteco" : "Ka´Nu"
+    },
+    {
+    "Espanol" : "Gran ",
+    "Mixteco" : "Chee"
+    },
+    {
+    "Espanol" : "Gordo ",
+    "Mixteco" : "Ka´Un O Ndu´U"
+    },
+    {
+    "Espanol" : "Sediento ",
+    "Mixteco" : "Ka´Va"
+    },
+    {
+    "Espanol" : "Contar ",
+    "Mixteco" : "Ka´Vi"
+    },
+    {
+    "Espanol" : "Estudiar ",
+    "Mixteco" : "Ka´Vi O Skua´A"
+    },
+    {
+    "Espanol" : "Marcar ",
+    "Mixteco" : "Ka´Yu"
+    },
+    {
+    "Espanol" : "Pintar ",
+    "Mixteco" : "Ndika´Yu"
+    },
+    {
+    "Espanol" : "Marcar ",
+    "Mixteco" : "Ka´Ñu"
+    },
+    {
+    "Espanol" : "Acero ",
+    "Mixteco" : "Kaa"
+    },
+    {
+    "Espanol" : "Visera ",
+    "Mixteco" : "Kaa"
+    },
+    {
+    "Espanol" : "Cobre ",
+    "Mixteco" : "Kaa Kuaan"
+    },
+    {
+    "Espanol" : "Estar ",
+    "Mixteco" : "Kanda O Kande"
+    },
+    {
+    "Espanol" : "Oro ",
+    "Mixteco" : "Kaa O Ku´Va"
+    },
+    {
+    "Espanol" : "Ese ",
+    "Mixteco" : "Kaa O Un"
+    },
+    {
+    "Espanol" : "Acostumbrar ",
+    "Mixteco" : "Kaan"
+    },
+    {
+    "Espanol" : "Regar ",
+    "Mixteco" : "Kacha"
+    },
+    {
+    "Espanol" : "Esparcir ",
+    "Mixteco" : "Kachanuu"
+    },
+    {
+    "Espanol" : "Distribuir ",
+    "Mixteco" : "Teta´An"
+    },
+    {
+    "Espanol" : "Algodon ",
+    "Mixteco" : "Kachi"
+    },
+    {
+    "Espanol" : "Decir ",
+    "Mixteco" : "Kachi"
+    },
+    {
+    "Espanol" : "Tropezar ",
+    "Mixteco" : "Kachi´I"
+    },
+    {
+    "Espanol" : "Andar ",
+    "Mixteco" : "Kaka"
+    },
+    {
+    "Espanol" : "Pedir ",
+    "Mixteco" : "Pedir"
+    },
+    {
+    "Espanol" : "Irse ",
+    "Mixteco" : "Kua´An"
+    },
+    {
+    "Espanol" : "Solicitar ",
+    "Mixteco" : "Kakan"
+    },
+    {
+    "Espanol" : "Cobrar ",
+    "Mixteco" : "Kakan Ya´Vi"
+    },
+    {
+    "Espanol" : "Empeñar ",
+    "Mixteco" : "Kakanchaa"
+    },
+    {
+    "Espanol" : "Orar ",
+    "Mixteco" : "Kakanta´Vi"
+    },
+    {
+    "Espanol" : "Rogar ",
+    "Mixteco" : "Kakantan´Vi"
+    },
+    {
+    "Espanol" : "Tirar ",
+    "Mixteco" : "Kakin O Siki´In"
+    },
+    {
+    "Espanol" : "Nacer ",
+    "Mixteco" : "Kaku"
+    },
+    {
+    "Espanol" : "Acusar ",
+    "Mixteco" : "Kakuachi O Sitaya´Vi"
+    },
+    {
+    "Espanol" : "Hipo ",
+    "Mixteco" : "Kaki´I"
+    },
+    {
+    "Espanol" : "Inflamar ",
+    "Mixteco" : "Kakiti"
+    },
+    {
+    "Espanol" : "Liso ",
+    "Mixteco" : "Kama O Lii"
+    },
+    {
+    "Espanol" : "Rapido ",
+    "Mixteco" : "Kama O Numi"
+    },
+    {
+    "Espanol" : "Brotar ",
+    "Mixteco" : "Kana"
+    },
+    {
+    "Espanol" : "Pelear ",
+    "Mixteco" : "Kanaa"
+    },
+    {
+    "Espanol" : "Caerse ",
+    "Mixteco" : "Kanakava"
+    },
+    {
+    "Espanol" : "Insultar ",
+    "Mixteco" : "Kananchaa"
+    },
+    {
+    "Espanol" : "Invocar ",
+    "Mixteco" : "Kanataa"
+    },
+    {
+    "Espanol" : "Adorar ",
+    "Mixteco" : "Kanaxaa"
+    },
+    {
+    "Espanol" : "Ahogar ",
+    "Mixteco" : "Kanchaa"
+    },
+    {
+    "Espanol" : "Aguantar ",
+    "Mixteco" : "Kanda"
+    },
+    {
+    "Espanol" : "Palpitar ",
+    "Mixteco" : "Kanda Añu"
+    },
+    {
+    "Espanol" : "Temblar ",
+    "Mixteco" : "Kanda O Ñiin"
+    },
+    {
+    "Espanol" : "Pararse ",
+    "Mixteco" : "Kakuiñi"
+    },
+    {
+    "Espanol" : "Sol ",
+    "Mixteco" : "Kandi O Ndikandii"
+    },
+    {
+    "Espanol" : "Convencer ",
+    "Mixteco" : "Kandixa"
+    },
+    {
+    "Espanol" : "Creer ",
+    "Mixteco" : "Kandixa"
+    },
+    {
+    "Espanol" : "Obedecer ",
+    "Mixteco" : "Kandatu"
+    },
+    {
+    "Espanol" : "Rebasar ",
+    "Mixteco" : "Kandoo"
+    },
+    {
+    "Espanol" : "Adelantar ",
+    "Mixteco" : "Kanduu"
+    },
+    {
+    "Espanol" : "Apuñalar ",
+    "Mixteco" : "Kani"
+    },
+    {
+    "Espanol" : "Avanzar ",
+    "Mixteco" : "Kani´In"
+    },
+    {
+    "Espanol" : "Alzar ",
+    "Mixteco" : "Adani´In"
+    },
+    {
+    "Espanol" : "Construir ",
+    "Mixteco" : "Kani O Sa´A"
+    },
+    {
+    "Espanol" : "Desbaratar ",
+    "Mixteco" : "Kanu"
+    },
+    {
+    "Espanol" : "Evergonzar ",
+    "Mixteco" : "Kanuu"
+    },
+    {
+    "Espanol" : "Confiar ",
+    "Mixteco" : "Kanu Ini"
+    },
+    {
+    "Espanol" : "Baboso ",
+    "Mixteco" : "Kanii"
+    },
+    {
+    "Espanol" : "Cunado ",
+    "Mixteco" : "Kasa"
+    },
+    {
+    "Espanol" : "Impedir ",
+    "Mixteco" : "Kasi"
+    },
+    {
+    "Espanol" : "Callar ",
+    "Mixteco" : "Kasi Yu´U"
+    },
+    {
+    "Espanol" : "Desayunar ",
+    "Mixteco" : "Kasini"
+    },
+    {
+    "Espanol" : "Nuca ",
+    "Mixteco" : "Kasukun"
+    },
+    {
+    "Espanol" : "Asarce ",
+    "Mixteco" : "Kasun"
+    },
+    {
+    "Espanol" : "Cancelar ",
+    "Mixteco" : "Kasi"
+    },
+    {
+    "Espanol" : "Cerrar ",
+    "Mixteco" : "Kasi"
+    },
+    {
+    "Espanol" : "Cantar ",
+    "Mixteco" : "Kata"
+    },
+    {
+    "Espanol" : "Escapar ",
+    "Mixteco" : "Katu"
+    },
+    {
+    "Espanol" : "Aplaudir ",
+    "Mixteco" : "Katu Nda´A"
+    },
+    {
+    "Espanol" : "Amarrar ",
+    "Mixteco" : "Katu´Ni O Ku´Ni"
+    },
+    {
+    "Espanol" : "Derramar ",
+    "Mixteco" : "Katu"
+    },
+    {
+    "Espanol" : "Derribar ",
+    "Mixteco" : "Kaxa"
+    },
+    {
+    "Espanol" : "Soplar ",
+    "Mixteco" : "Tivi"
+    },
+    {
+    "Espanol" : "Aventar ",
+    "Mixteco" : "Xindeche"
+    },
+    {
+    "Espanol" : "Util ",
+    "Mixteco" : "Kaxaan"
+    },
+    {
+    "Espanol" : "Comer ",
+    "Mixteco" : "Kaxi"
+    },
+    {
+    "Espanol" : "Estornudar ",
+    "Mixteco" : "Kaxin"
+    },
+    {
+    "Espanol" : "Frialdad ",
+    "Mixteco" : "Kaxin"
+    },
+    {
+    "Espanol" : "Ahorar ",
+    "Mixteco" : "Kaya"
+    },
+    {
+    "Espanol" : "Toser ",
+    "Mixteco" : "Kayu"
+    },
+    {
+    "Espanol" : "Arder ",
+    "Mixteco" : "Kayun"
+    },
+    {
+    "Espanol" : "Afuera ",
+    "Mixteco" : "Ke´E"
+    },
+    {
+    "Espanol" : "Salir ",
+    "Mixteco" : "Kee"
+    },
+    {
+    "Espanol" : "Corre ",
+    "Mixteco" : "Kee O Kunu"
+    },
+    {
+    "Espanol" : "Quedarse ",
+    "Mixteco" : "Kendo"
+    },
+    {
+    "Espanol" : "Entrar ",
+    "Mixteco" : "Keta O Ki´Vi"
+    },
+    {
+    "Espanol" : "Empezar ",
+    "Mixteco" : "Kexa´A O Teta´A"
+    },
+    {
+    "Espanol" : "Ir ",
+    "Mixteco" : "Ki´In"
+    },
+    {
+    "Espanol" : "Alejar ",
+    "Mixteco" : "Ki´In "
+    },
+    {
+    "Espanol" : "Remendar ",
+    "Mixteco" : "Kiku"
+    },
+    {
+    "Espanol" : "Calmar ",
+    "Mixteco" : "Kindaa"
+    },
+    {
+    "Espanol" : "Quitar ",
+    "Mixteco" : "Kindaa"
+    },
+    {
+    "Espanol" : "Malo ",
+    "Mixteco" : "Kini"
+    },
+    {
+    "Espanol" : "Luchar ",
+    "Mixteco" : "Kinyii"
+    },
+    {
+    "Espanol" : "Coraje ",
+    "Mixteco" : "Kiti"
+    },
+    {
+    "Espanol" : "Antier ",
+    "Mixteco" : "Kiuun"
+    },
+    {
+    "Espanol" : "Trabajar ",
+    "Mixteco" : "Kixaa Chiñu"
+    },
+    {
+    "Espanol" : "Alabar ",
+    "Mixteco" : "Kixaa Ka´Nu"
+    },
+    {
+    "Espanol" : "Respetar ",
+    "Mixteco" : "Kixaa Ka´Nu"
+    },
+    {
+    "Espanol" : "Festejar ",
+    "Mixteco" : "Kixaa Kanu"
+    },
+    {
+    "Espanol" : "Juzgar ",
+    "Mixteco" : "Kixaa Nami"
+    },
+    {
+    "Espanol" : "Castigar ",
+    "Mixteco" : "Kixaa Nani"
+    },
+    {
+    "Espanol" : "Maltratar ",
+    "Mixteco" : "Kixaa Nduva´A"
+    },
+    {
+    "Espanol" : "Preparar ",
+    "Mixteco" : "Kixaa Nundo´Ova´A"
+    },
+    {
+    "Espanol" : "Venir ",
+    "Mixteco" : "Kixi"
+    },
+    {
+    "Espanol" : "Pegajoso ",
+    "Mixteco" : "Kixin"
+    },
+    {
+    "Espanol" : "Quitarse ",
+    "Mixteco" : "Kixio"
+    },
+    {
+    "Espanol" : "Guajolote ",
+    "Mixteco" : "Ko´Lo"
+    },
+    {
+    "Espanol" : "Pila ",
+    "Mixteco" : "Ko´O Yuu"
+    },
+    {
+    "Espanol" : "Existir ",
+    "Mixteco" : "Ko´O O Chaku"
+    },
+    {
+    "Espanol" : "Pantano ",
+    "Mixteco" : "Ko´Yo"
+    },
+    {
+    "Espanol" : "Quemarse ",
+    "Mixteco" : "Koko"
+    },
+    {
+    "Espanol" : "Cuidar ",
+    "Mixteco" : "Kondito"
+    },
+    {
+    "Espanol" : "Espeso ",
+    "Mixteco" : "Kokon O U´Gua"
+    },
+    {
+    "Espanol" : "Conciderar ",
+    "Mixteco" : "Kondo´O Ini"
+    },
+    {
+    "Espanol" : "Culebrar ",
+    "Mixteco" : "Koo"
+    },
+    {
+    "Espanol" : "Babosa ",
+    "Mixteco" : "Koo Kanii"
+    },
+    {
+    "Espanol" : "Lagarto ",
+    "Mixteco" : "Koo Yuchi"
+    },
+    {
+    "Espanol" : "Caracol ",
+    "Mixteco" : "Koo Yiki O Chee"
+    },
+    {
+    "Espanol" : "Vivir ",
+    "Mixteco" : "Koo O Chskaoo"
+    },
+    {
+    "Espanol" : "Tortola ",
+    "Mixteco" : "Koruu"
+    },
+    {
+    "Espanol" : "Montar ",
+    "Mixteco" : "Koso"
+    },
+    {
+    "Espanol" : "Atender ",
+    "Mixteco" : "Koto"
+    },
+    {
+    "Espanol" : "Probar ",
+    "Mixteco" : "Koyotuni"
+    },
+    {
+    "Espanol" : "Espiar ",
+    "Mixteco" : "Kotoyu´U"
+    },
+    {
+    "Espanol" : "Comprobar ",
+    "Mixteco" : "Kotuni"
+    },
+    {
+    "Espanol" : "Confirmar ",
+    "Mixteco" : "Kotuni"
+    },
+    {
+    "Espanol" : "Mediodia ",
+    "Mixteco" : "Koxiuu"
+    },
+    {
+    "Espanol" : "Rascar ",
+    "Mixteco" : "Koyo"
+    },
+    {
+    "Espanol" : "Temer ",
+    "Mixteco" : "Koyu´Vi"
+    },
+    {
+    "Espanol" : "Hola ",
+    "Mixteco" : "Ku Va´A"
+    },
+    {
+    "Espanol" : "Ordeñar ",
+    "Mixteco" : "Ku´Ni"
+    },
+    {
+    "Espanol" : "Estregar ",
+    "Mixteco" : "Ku´U"
+    },
+    {
+    "Espanol" : "Contener ",
+    "Mixteco" : "Ku´Un"
+    },
+    {
+    "Espanol" : "Enfermarse ",
+    "Mixteco" : "Ku´Vi"
+    },
+    {
+    "Espanol" : "Hermana ",
+    "Mixteco" : "Ku´Vi"
+    },
+    {
+    "Espanol" : "Crujir ",
+    "Mixteco" : "Ku´Yu"
+    },
+    {
+    "Espanol" : "Colorado ",
+    "Mixteco" : "Kua´A"
+    },
+    {
+    "Espanol" : "Derecha ",
+    "Mixteco" : "Kua´A"
+    },
+    {
+    "Espanol" : "Rojo ",
+    "Mixteco" : "Kua´A"
+    },
+    {
+    "Espanol" : "Mucho ",
+    "Mixteco" : "Kua´A O Kini"
+    },
+    {
+    "Espanol" : "Bastante ",
+    "Mixteco" : "Kini O Ni"
+    },
+    {
+    "Espanol" : "Dar ",
+    "Mixteco" : "Kua´A"
+    },
+    {
+    "Espanol" : "Segur ",
+    "Mixteco" : "Kua´An"
+    },
+    {
+    "Espanol" : "Continuar ",
+    "Mixteco" : "Siin"
+    },
+    {
+    "Espanol" : "Prestar ",
+    "Mixteco" : "Kua´Anuu"
+    },
+    {
+    "Espanol" : "Crecer ",
+    "Mixteco" : "Kua´Nu"
+    },
+    {
+    "Espanol" : "Anochecer ",
+    "Mixteco" : "Kuaa"
+    },
+    {
+    "Espanol" : "Ciego ",
+    "Mixteco" : "Kuaa"
+    },
+    {
+    "Espanol" : "Amarillo ",
+    "Mixteco" : "Kuaan"
+    },
+    {
+    "Espanol" : "Palido ",
+    "Mixteco" : "Kuaan"
+    },
+    {
+    "Espanol" : "Comprar ",
+    "Mixteco" : "Sata O Ki´In"
+    },
+    {
+    "Espanol" : "Chicos ",
+    "Mixteco" : "Kuachi"
+    },
+    {
+    "Espanol" : "Pequenos ",
+    "Mixteco" : "Vali O Kuachi"
+    },
+    {
+    "Espanol" : "Sentimental ",
+    "Mixteco" : "Kuaka"
+    },
+    {
+    "Espanol" : "Llorar ",
+    "Mixteco" : "Kuaku"
+    },
+    {
+    "Espanol" : "Reir ",
+    "Mixteco" : "Kuaku"
+    },
+    {
+    "Espanol" : "Comadre ",
+    "Mixteco" : "Kualia"
+    },
+    {
+    "Espanol" : "Perdonar ",
+    "Mixteco" : "Kuanka´Nu Ini"
+    },
+    {
+    "Espanol" : "Aceptar ",
+    "Mixteco" : "Kuanku´Nu"
+    },
+    {
+    "Espanol" : "Admitir ",
+    "Mixteco" : "Kuanta´Vi"
+    },
+    {
+    "Espanol" : "Envidia ",
+    "Mixteco" : "Kuasun"
+    },
+    {
+    "Espanol" : "Ocupar ",
+    "Mixteco" : "Kuatiñu"
+    },
+    {
+    "Espanol" : "Usar ",
+    "Mixteco" : "Kuantiñu"
+    },
+    {
+    "Espanol" : "Servir ",
+    "Mixteco" : "Kuatiñu"
+    },
+    {
+    "Espanol" : "Agaradecer ",
+    "Mixteco" : "Kuatu´Un"
+    },
+    {
+    "Espanol" : "Gustar ",
+    "Mixteco" : "Kuatu´Un O Xata´An Ini"
+    },
+    {
+    "Espanol" : "Volver ",
+    "Mixteco" : "Huaxa"
+    },
+    {
+    "Espanol" : "Caballo ",
+    "Mixteco" : "Huayu"
+    },
+    {
+    "Espanol" : "Pisar ",
+    "Mixteco" : "Kuañu"
+    },
+    {
+    "Espanol" : "Ardilla ",
+    "Mixteco" : "Kuaño O Ndikuañu"
+    },
+    {
+    "Espanol" : "Estar Vivo ",
+    "Mixteco" : "Kuhaku"
+    },
+    {
+    "Espanol" : "Bañarse ",
+    "Mixteco" : "Kuchi"
+    }, 
+    {
+    "Espanol" : "Mascar ",
+    "Mixteco" : "Kuchi"
+    },
+    {
+    "Espanol" : "Bravo ",
+    "Mixteco" : "Kue´E"
+    },
+    {
+    "Espanol" : "Mal ",
+    "Mixteco" : "Kue´E"
+    },
+    {
+    "Espanol" : "Dolor ",
+    "Mixteco" : "Kue´E Kava Ini"
+    },
+    {
+    "Espanol" : "Resfriado ",
+    "Mixteco" : "Kue´Ekaxin"
+    },
+    {
+    "Espanol" : "Tos ",
+    "Mixteco" : "Kue´E Kayu"
+    },
+    {
+    "Espanol" : "Calenturar ",
+    "Mixteco" : "Kue´E Kivi O Ka´Ni"
+    },
+    {
+    "Espanol" : "Diarrea ",
+    "Mixteco" : "Kue´E Kuun"
+    },
+    {
+    "Espanol" : "Vomito ",
+    "Mixteco" : "Kue´E Nduña"
+    },
+    {
+    "Espanol" : "Disenteria ",
+    "Mixteco" : "Kue É Saxin"
+    },
+    {
+    "Espanol" : "Parto ",
+    "Mixteco" : "Kue´E Se´E"
+    }, 
+    {
+    "Espanol" : "Tuberculosis ",
+    "Mixteco" : "Kue´E Xaan"
+    },
+    {
+    "Espanol" : "Catarro ",
+    "Mixteco" : "Kue ´E Xiti O Sai"
+    },
+    {
+    "Espanol" : "Paludismo ",
+    "Mixteco" : "Kue´E Xnu´Un"
+    }, 
+    {
+    "Espanol" : "Espanto ",
+    "Mixteco" : "Kue´E Yu´U"
+    },
+    {
+    "Espanol" : "Feo ",
+    "Mixteco" : "Kini O Ndasi"
+    },
+    {
+    "Espanol" : "Despacio ",
+    "Mixteco" : "Kuee"
+    }, 
+    {
+    "Espanol" : "Como ",
+    "Mixteco" : "Kuenta"
+    },
+    {
+    "Espanol" : "Ladron ",
+    "Mixteco" : "Kui´Na"
+    },
+    {
+    "Espanol" : "Diablo ",
+    "Mixteco" : "Taa Xaan"
+    }, 
+    {
+    "Espanol" : "Humilde ",
+    "Mixteco" : "Kui´Ya"
+    },
+    {
+    "Espanol" : "Sencillo ",
+    "Mixteco" : "Kui´Ya"
+    }, 
+    {
+    "Espanol" : "Debil ",
+    "Mixteco" : "Kui´Ya Ini"
+    },
+    {
+    "Espanol" : "Ladrar ",
+    "Mixteco" : "Kui´Ña"
+    }, 
+    {
+    "Espanol" : "Desparramar ",
+    "Mixteco" : "Kuichanuu"
+    },
+    {
+    "Espanol" : "Agudo ",
+    "Mixteco" : "Kuii"
+    }, 
+    {
+    "Espanol" : "Claro ",
+    "Mixteco" : "Kuii"
+    },
+    {
+    "Espanol" : "Prender ",
+    "Mixteco" : "Kuikun"
+    }, 
+    {
+    "Espanol" : "Ruido ",
+    "Mixteco" : "Kuiso"
+    },
+    {
+    "Espanol" : "Arrebatar ",
+    "Mixteco" : "Kuisonchaa"
+    }, 
+    {
+    "Espanol" : "Cansar ",
+    "Mixteco" : "Kuita"
+    },
+    {
+    "Espanol" : "Arrebatar ",
+    "Mixteco" : "Kuita Ini"
+    }, 
+    {
+    "Espanol" : "Cansarse ",
+    "Mixteco" : "Kuita Ini"
+    },
+    {
+    "Espanol" : "Tibio ",
+    "Mixteco" : "Kuixin"
+    }, 
+    {
+    "Espanol" : "Blanco ",
+    "Mixteco" : "Xikiyi"
+    },
+    {
+    "Espanol" : "Año ",
+    "Mixteco" : "Kuiya"
+    },
+    {
+    "Espanol" : "Abrir ",
+    "Mixteco" : "Kuiña"
+    },
+    {
+    "Espanol" : "Destapar ",
+    "Mixteco" : "Kuiñ"
+    }, 
+    {
+    "Espanol" : "Jaguar ",
+    "Mixteco" : "Kuiñi"
+    },
+    {
+    "Espanol" : "Peine ",
+    "Mixteco" : "Kuka"
+    }, 
+    {
+    "Espanol" : "Abundante ",
+    "Mixteco" : "Kuka´Nu"
+    },
+    {
+    "Espanol" : "Despedazar ",
+    "Mixteco" : "Kukuachi"
+    }, 
+    {
+    "Espanol" : "Contaminado ",
+    "Mixteco" : "Kukuachi"
+    },
+    {
+    "Espanol" : "Desquebrajar ",
+    "Mixteco" : "Kukue´E"
+    }, 
+    {
+    "Espanol" : "Tardar ",
+    "Mixteco" : "Kukuee"
+    },
+    {
+    "Espanol" : "Grueso ",
+    "Mixteco" : "Kukui´Ya Ini"
+    }, 
+    {
+    "Espanol" : "Escaso ",
+    "Mixteco" : "Kumasi Ga"
+    },
+    {
+    "Espanol" : "Faltar ",
+    "Mixteco" : "Kumasi Ga O Kumasi"
+    }, 
+    {
+    "Espanol" : "Llamarse ",
+    "Mixteco" : "Kunani"
+    },
+    {
+    "Espanol" : "Sentado ",
+    "Mixteco" : "Kunchuku"
+    },
+    {
+    "Espanol" : "Amor ",
+    "Mixteco" : "Kunda´Vi"
+    },
+    {
+    "Espanol" : "Amar ",
+    "Mixteco" : "Kunda´Vi Ni "
+    },
+    {
+    "Espanol" : "Cuidar ",
+    "Mixteco" : "Kundaa"
+    },
+    {
+    "Espanol" : "Esperar ",
+    "Mixteco" : "Kundatu"
+    },
+    ];
+    for (let i = 0; i < mixteco.length; i++) {
+        if (a == mixteco[i].Espanol) {
+            console.log("Español: " + mixteco[i].Espanol + "\n" + "Mixteco: " + mixteco[i].Mixteco);
+            console.log(" ");
+            preguntarotravez3();
+            break;
+        }
+        if (i == mixteco.length - 1) {
+            console.log( a + " No se encontro en la lista");
+            console.log(" ");
+            preguntarotravez3();
+        }
+}
+}
+function preguntarotravez3 (){
+    let b = prompt("¿Desea traducir otra palabra? \n 1. Si \n 2. No");
+        switch (b) {
+            case "1":
+                return mixteco();
+                break;
+            case "2":
+                return menuw();
+                break;
+            default:
+                alert("Opcion no valida");
+                preguntarotravez3();
+                break;
+    }
+    }
+function poemasnahuatl (){
+    console.log("Poemas de la cultura Nahuatl");
+    console.log(" ");
+    console.log("1.	TOCHAN IN ALTEPETL \nTocahn in xochitlah, ye in huecauh Mexihco Tenochtitlán; cualcan, yeccan, otechmohual huiquili Ipalnemohuani, nincacata totlenyouh, tomahuizouh intlatic pac. Tochan pocayautlan, nemequimilolli in altepetl ye in axcan Mexihco Tenochtitlán; tlahuelilocatiltic tlacahuacayan. ¿Cuixoc huel tiquehuazqueh nican in cuicatl? nican otech mohualhuiquili Ipalnemohuani, nican cacta totlenyouh, tomahuizouh in tlalticpac.");
+    console.log("NUESTRA CASA RECINTO DE FLORES \nNuestra casa, recinto de flores, con rayos de sol en la ciudad, México Tenochtitlán en tiempos antiguos; lugar bueno, hermoso, nuestra morada de humanos, nos trajo aquí el dador de la vida, aquí estuvo nuestra fama, nuestra gloria en la tierra. Nuestra casa, niebla de humo, ciudad mortaja, México Tenochtitlán ahora; enloquecido lugar de ruido ¿aún podemos elevar un canto? Nos trajo aquí el dador de la vida aquí estuvo nuestra fama, nuestra gloria en la tierra.");
+    console.log(" ");
+    console.log("2.	YE NONNOCUILTONOHUA \nYe nonnocuiltonohua, on nitepiltzin, Nezahualcóyotl. Nicnechico cozcatl, in quetzalin patlahuac, ye nonicyximatin chalchihuitl, ¡in tepilhuan! Yxco nontlatlachia, nepapan quauhtlin, ocelotl, ye nonicyximatin chalchihuitl, ya in maquiztli.");
+    console.log("SOY RICO \nSoy rico, yo, el señor Nezahualcóyotl. Reúno el collar, los anchos plumajes de quetzal, por experiencia conozco los jades, ¡son los príncipes amigos! Me fijo en sus rostros, por todas partes águilas y tigres, por experiencia conozco los jades, las ajorcas preciosas.");
+    console.log(" ");
+    console.log("3.	CUICATL ANYOLQUE \nCuicatl anyolque, xochitl ancueponque, antepilhuan, ni zacatimaltzin, in Tochihuitzin, ompa ye huitze xochimecatl.");
+    console.log("VIVISTEIS EL CANTO \nVivísteis el canto, abrísteis la flor, vosotros, oh príncipes, yo, Tochihuitzin, soy tejedor de grama, el sartal de flores por allá cae.");
+    console.log(" ");
+    return culturanahuatl();
+}
+function poemaszapoteco (){
+    console.log("Poemas de la cultura Zapoteca");
+    console.log(" ");
+    console.log("1.	Xtuí \nGula’qui’ xtuxhu beeu guielúlu’ ne bichuugu’ xtuí nucachilú ndaani’ xpidola yulu’. Biina’ guiehuana’ daabilú’ de ra guixiá dxaapahuiini’ nuu ndaani’ guielulu’.");
+    console.log("Vergüenza \nPon el filo de la luna sobre tus ojos y corta la vergüenza que se esconde en tu canica de tierra. Llora espejos enterrados hasta que desaparezca la niña.");
+    console.log(" ");
+    console.log("2.	Guielú dani guí \nNdaani’ ti le’ yuze zuguaa cagaañe guidxilayú ne dxita ñee: cabeza naa. Naa ridide’ nisiaase’ luguiá’ ti za guiba’ ne riuaabie’ ra nuume.");
+    console.log("Ojo de volcán \nEn el ruedo un toro escarba el mundo con las pezuñas: me espera. Yo paso dormida sobre una nube y me arrojo.");
+    console.log(" ");
+    console.log("3.	Yoo lidxe’ \nDxi guca’ nahuiini’ guse’ ndaani’ na’ jñaa biida’ sica beeu ndaani’ ladxi’do’ guibá’. Luuna’ stidu xiaa ni biree ndaani’ xpichu’ yaga bioongo’. Gudxite nia’ strompi’pi’ bine’ laa za, ne guie’ sti matamoro gúca behua xiñaa bitua’dxi riguíte nia’ ca bizana’. Sica rucuiidxicabe benda buaa lu gubidxa zacaca gusidu lu daa, galaa íque lagadu rasi belecrú. Cayaca gueta suquii, cadiee doo ria’ ne guixhe, cayaca guendaró, cayaba nisaguie guidxilayú, rucha’huidu dxuladi, ne ndaani’ ti xiga ndo’pa’ ri de’du telayú.");
+    console.log("Casa primera \nDe niña dormí en los brazos de mi abuela como la luna en el corazón del cielo. La cama: algodón que salió de la fruta del pochote. Hice de los árboles aceite, y a mis amigos les vendí como guachinango la flor del flamboyán. Como secan los camarones al sol, así nos tendíamos sobre un petate. Encima de nuestros párpados dormía la cruz de estrellas. Tortillas de comiscal, hilos teñidos para las hamacas, la comida se hacía con la felicidad de la llovizna sobre la tierra, batíamos el chocolate,");
+    console.log(" ");
+    return culturazapoteca();
+}
+function poemasmixteco (){
+    console.log("Poemas de la cultura Mixteca");
+    console.log(" ");
+    console.log("1.	SAVI YAKUUA \nkatie'e in yuyu yakua nkuvi kunani savi ya'a, tachi savi, kunaniin savi lee sava kuvii teku kuii tuku \nkuvijin xini ve'i, jin yukun itu ini yuku, ne sukun na'a yutun koyo, kueeni kueeni, yuyu ma ka'nu");
+    console.log("LLUVIA NOCTURNA \nbaila una gota en la noche esta lluvia no puede llamarse aguacero sino un descenso más azul que será verde otra vez \nfrescura en la cabeza de la casa y en los surcos de la montaña, desde los brazos del árbol cae, lentamente, más agua");
+    console.log(" ");
+    console.log("2.	ÑUU YUVE \nvajini ya'a chi nkachidaa kuvi ka'vini tu'un Ñuu Savi ya'a, nuun ntu nkuni Juare jin Vasconcelo teso'odaa tu'un nichi da tu'un ya'a jikadaa jin in jie'e \nne kaa a kunijin kuiyo ñu'ma da nu've? kachidanu ne kaa kas+ da kaa ve'i ñu'un yu'udaa? kani yakuaa, saa va kuvi kuaadayo jin da tiuun je da niy+ xinotodaa-dayo kiv+ katie'edaa \nna'adayo axin nuundayo, sukuan va jika tee ñu'un ini ichi je ka'an kachii: ndaka va kuni nuun nijin je najiavi a jiakuu nuun xine'ñun je yavi mi'ne iñu jiaa in ita ñu'ma");
+    console.log("OAXACA \nvine aquí porque me dijeron que podía leer mi lengua aquí donde Juárez ni Vasconcelos desearon escuchar las voces milenarias estas lenguas que permanecen sobre un pie \n¿a qué horas de la mañana se despeja la bruma? decidme ¿En qué minuto se callan las campanas? la noche es larga sin embargo las estrellas nos abren los ojos y los muertos nos despiertan en el baile de algún día \nsubir y bajar, he ahí la posibilidad del andante mientras repite: está pendiente todo la sonrisa descansa en la sombra y en el hueco del cactus florece el humo");
+    console.log(" ");
+    return culturamixteca();
+}
+</script>
